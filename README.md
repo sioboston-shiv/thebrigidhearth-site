@@ -1,6 +1,71 @@
 # thebrigidhearth.com
 
-Static site for The Hearth (Draíocht) iOS app. Hosted on GitHub Pages.
+Marketing site for The Hearth (Draíocht) iOS app. Vanilla HTML/CSS/JS, no build step. Hosted on GitHub Pages with custom domain via Namecheap.
+
+## Pages
+
+- `/` — landing page (hero, daily card, four pillars, founder, FAQ, CTA)
+- `/deck/` — browse the 78-card Celtic deck (with celtic/classic toggle)
+- `/deck/<slug>.html` — 78 individual card pages, generated from `data/deck.json`
+- `/privacy.html`, `/support.html`, `/terms.html` — legal
+
+## Maintenance
+
+### Regenerate the 78 card pages
+
+```bash
+node scripts/generate-deck-pages.mjs
+```
+
+Run after `data/deck.json` changes.
+
+### Regenerate the sitemap
+
+```bash
+node scripts/generate-sitemap.mjs
+```
+
+Run after adding new pages.
+
+### Re-export the deck from the app
+
+From the app repo:
+
+```bash
+cd ~/Desktop/testing\ claude\ code/draiocht
+npx tsx scripts/export-deck-for-site.ts
+```
+
+### Convert images to WebP
+
+```bash
+./scripts/convert-images.sh
+```
+
+Run after adding new card art.
+
+### Run tests
+
+```bash
+npm test
+```
+
+Or: `node --test tests/site.test.mjs tests/generate-deck-pages.test.mjs`.
+
+### Run Lighthouse audit
+
+```bash
+npx lighthouse http://localhost:8080/ --view
+```
+
+Targets: ≥ 95 across performance, SEO, accessibility, best-practices.
+
+### Replace placeholder assets
+
+These are placeholders pending final art:
+- `assets/img/founder.svg` — replace with real photo from Siobhan as `founder.jpg`, then update markup in `index.html`
+- `assets/img/pillars/*.svg` — replace with commissioned illustrations
+- `assets/img/hero/hero-og.jpg` — placeholder OG share image (1200×630) to add
 
 ## Deploy steps
 
