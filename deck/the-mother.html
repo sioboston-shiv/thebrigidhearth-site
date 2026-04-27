@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An Mháthair · The Mother (The Empress) — Celtic Tarot · The Hearth</title>
+<meta name="description" content="An Mháthair (The Mother / The Empress) — The earth is generous, and so are you. This is a time of growth, of tending what you have planted. Let yourself be held by the land beneath ">
+<link rel="canonical" href="https://thebrigidhearth.com/deck/the-mother.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An Mháthair — The Empress">
+<meta property="og:description" content="The earth is generous, and so are you. This is a time of growth, of tending what you have planted. Let yourself be held by the land beneath you — she has carried heavier things than your worries, and ">
+<meta property="og:url" content="https://thebrigidhearth.com/deck/the-mother.html">
+<meta property="og:image" content="https://thebrigidhearth.com/assets/img/celtic/the-mother.png">
+<link rel="preload" href="/assets/fonts/cinzel-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Hearth",
+      "item": "https://thebrigidhearth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Celtic Deck",
+      "item": "https://thebrigidhearth.com/deck/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Mother",
+      "item": "https://thebrigidhearth.com/deck/the-mother.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="container">
+    <a href="/deck/" class="back-home">← The Celtic Deck</a>
+    <p class="label" style="font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:0.18em;font-size:0.85rem;color:var(--gold);margin:1rem 0 0.5rem;">Major Arcana · III</p>
+    <h1 id="card-name">An Mháthair</h1>
+    <p class="subtitle" id="card-subname">The Mother · The Empress</p>
+    <div class="toggle" role="group" aria-label="Deck style" style="margin-top:1.5rem;">
+      <button id="style-celtic" aria-pressed="true">Celtic</button>
+      <button id="style-classic" aria-pressed="false">Classic</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container card-detail-container">
+    <picture id="card-art">
+      <source srcset="/assets/img/celtic/the-mother.webp" type="image/webp">
+      <img src="/assets/img/celtic/the-mother.png" alt="The Mother" width="600" height="900" decoding="async">
+    </picture>
+
+    <p class="keywords">abundance · nurturing · sovereignty · the green world · generosity</p>
+
+    <section class="card-meaning">
+      <h2>Upright</h2>
+      <p>The earth is generous, and so are you. This is a time of growth, of tending what you have planted. Let yourself be held by the land beneath you — she has carried heavier things than your worries, and she will carry these too.</p>
+    </section>
+
+    <section class="card-meaning">
+      <h2>Reversed</h2>
+      <p>You may be giving until you are empty, or refusing to receive what is offered. A mother who does not rest cannot feed her children. Tend to your own soil before you water everyone else&#39;s garden.</p>
+    </section>
+
+    <section class="card-meaning"><h2>Irish lore</h2><p>Danu is the great mother goddess of the Tuatha Dé Danann — the people of the goddess Danu — who ruled Ireland before retreating into the sídhe mounds. She represents the fertile land itself, and sovereignty in Ireland was always tied to the goddess of the land.</p></section>
+
+    <section class="card-cta" style="text-align:center;margin-top:3rem;">
+      <p style="margin-bottom:1rem;">Read this card with Brigid →</p>
+      <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+        <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+    </nav>
+    <p>© 2026 Siobhan McAuley · thebrigidhearth.com</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { getDeckStyle, setDeckStyle } from '/assets/js/site.js';
+  const card = {"slug":"the-mother","classicSlug":"the-empress","nameIrish":"An Mháthair","nameClassic":"The Empress"};
+
+  function applyStyle(style) {
+    const slug = style === 'celtic' ? card.slug : card.classicSlug;
+    const ext = style === 'celtic' ? 'png' : 'jpg';
+    const pic = document.getElementById('card-art');
+    pic.querySelector('source').srcset = '/assets/img/' + style + '/' + slug + '.webp';
+    pic.querySelector('img').src = '/assets/img/' + style + '/' + slug + '.' + ext;
+    document.getElementById('card-name').textContent = style === 'celtic' ? card.nameIrish : card.nameClassic;
+    document.getElementById('style-celtic').setAttribute('aria-pressed', style === 'celtic');
+    document.getElementById('style-classic').setAttribute('aria-pressed', style === 'classic');
+  }
+
+  applyStyle(getDeckStyle());
+  document.getElementById('style-celtic').addEventListener('click', () => { setDeckStyle('celtic'); applyStyle('celtic'); });
+  document.getElementById('style-classic').addEventListener('click', () => { setDeckStyle('classic'); applyStyle('classic'); });
+</script>
+
+</body>
+</html>

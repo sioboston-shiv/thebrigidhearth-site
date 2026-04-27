@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aon na nGaoth · Ace of Winds (Ace of Swords) — Celtic Tarot · The Hearth</title>
+<meta name="description" content="Aon na nGaoth (Ace of Winds / Ace of Swords) — The wren is the smallest bird and the cleverest — it won the title of king by riding on the eagle&#39;s back, then flying higher when the eagle ">
+<link rel="canonical" href="https://thebrigidhearth.com/deck/ace-of-winds.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aon na nGaoth — Ace of Swords">
+<meta property="og:description" content="The wren is the smallest bird and the cleverest — it won the title of king by riding on the eagle&#39;s back, then flying higher when the eagle tired. A new idea has come to you, and it may seem small, bu">
+<meta property="og:url" content="https://thebrigidhearth.com/deck/ace-of-winds.html">
+<meta property="og:image" content="https://thebrigidhearth.com/assets/img/celtic/ace-of-winds.png">
+<link rel="preload" href="/assets/fonts/cinzel-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Hearth",
+      "item": "https://thebrigidhearth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Celtic Deck",
+      "item": "https://thebrigidhearth.com/deck/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ace of Winds",
+      "item": "https://thebrigidhearth.com/deck/ace-of-winds.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="container">
+    <a href="/deck/" class="back-home">← The Celtic Deck</a>
+    <p class="label" style="font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:0.18em;font-size:0.85rem;color:var(--gold);margin:1rem 0 0.5rem;">Swords</p>
+    <h1 id="card-name">Aon na nGaoth</h1>
+    <p class="subtitle" id="card-subname">Ace of Winds · Ace of Swords</p>
+    <div class="toggle" role="group" aria-label="Deck style" style="margin-top:1.5rem;">
+      <button id="style-celtic" aria-pressed="true">Celtic</button>
+      <button id="style-classic" aria-pressed="false">Classic</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container card-detail-container">
+    <picture id="card-art">
+      <source srcset="/assets/img/celtic/ace-of-winds.webp" type="image/webp">
+      <img src="/assets/img/celtic/ace-of-winds.png" alt="Ace of Winds" width="600" height="900" decoding="async">
+    </picture>
+
+    <p class="keywords">cunning · the king of birds · cleverness · new ideas</p>
+
+    <section class="card-meaning">
+      <h2>Upright</h2>
+      <p>The wren is the smallest bird and the cleverest — it won the title of king by riding on the eagle&#39;s back, then flying higher when the eagle tired. A new idea has come to you, and it may seem small, but it is sharp and cunning and full of possibility. Do not underestimate it.</p>
+    </section>
+
+    <section class="card-meaning">
+      <h2>Reversed</h2>
+      <p>Cleverness without courage is just trickery. You may be relying on wit when what is needed is honest effort, or your new idea is clever but not wise. The wren won the contest, but it also had to outrun every other bird afterward. Think it through.</p>
+    </section>
+
+    <section class="card-meaning"><h2>Irish lore</h2><p>The wren (Dreoilín) is the king of all birds in Irish tradition. On St. Stephen&#39;s Day, the Wren Boys would hunt the wren and carry it from house to house, singing for coins. The wren&#39;s cleverness in outwitting the eagle made it a symbol of cunning triumphing over brute strength.</p></section>
+
+    <section class="card-cta" style="text-align:center;margin-top:3rem;">
+      <p style="margin-bottom:1rem;">Read this card with Brigid →</p>
+      <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+        <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+    </nav>
+    <p>© 2026 Siobhan McAuley · thebrigidhearth.com</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { getDeckStyle, setDeckStyle } from '/assets/js/site.js';
+  const card = {"slug":"ace-of-winds","classicSlug":"ace-of-swords","nameIrish":"Aon na nGaoth","nameClassic":"Ace of Swords"};
+
+  function applyStyle(style) {
+    const slug = style === 'celtic' ? card.slug : card.classicSlug;
+    const ext = style === 'celtic' ? 'png' : 'jpg';
+    const pic = document.getElementById('card-art');
+    pic.querySelector('source').srcset = '/assets/img/' + style + '/' + slug + '.webp';
+    pic.querySelector('img').src = '/assets/img/' + style + '/' + slug + '.' + ext;
+    document.getElementById('card-name').textContent = style === 'celtic' ? card.nameIrish : card.nameClassic;
+    document.getElementById('style-celtic').setAttribute('aria-pressed', style === 'celtic');
+    document.getElementById('style-classic').setAttribute('aria-pressed', style === 'classic');
+  }
+
+  applyStyle(getDeckStyle());
+  document.getElementById('style-celtic').addEventListener('click', () => { setDeckStyle('celtic'); applyStyle('celtic'); });
+  document.getElementById('style-classic').addEventListener('click', () => { setDeckStyle('classic'); applyStyle('classic'); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seacht na nGaoth · Seven of Winds (Seven of Swords) — Celtic Tarot · The Hearth</title>
+<meta name="description" content="Seacht na nGaoth (Seven of Winds / Seven of Swords) — The Children of Lir were swans for nine hundred years, and they did not stop singing. Transformation is happening, and it may take longer th">
+<link rel="canonical" href="https://thebrigidhearth.com/deck/seven-of-winds.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Seacht na nGaoth — Seven of Swords">
+<meta property="og:description" content="The Children of Lir were swans for nine hundred years, and they did not stop singing. Transformation is happening, and it may take longer than you wish. But even in the waiting, there is beauty — in y">
+<meta property="og:url" content="https://thebrigidhearth.com/deck/seven-of-winds.html">
+<meta property="og:image" content="https://thebrigidhearth.com/assets/img/celtic/seven-of-winds.png">
+<link rel="preload" href="/assets/fonts/cinzel-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Hearth",
+      "item": "https://thebrigidhearth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Celtic Deck",
+      "item": "https://thebrigidhearth.com/deck/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Seven of Winds",
+      "item": "https://thebrigidhearth.com/deck/seven-of-winds.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="container">
+    <a href="/deck/" class="back-home">← The Celtic Deck</a>
+    <p class="label" style="font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:0.18em;font-size:0.85rem;color:var(--gold);margin:1rem 0 0.5rem;">Swords</p>
+    <h1 id="card-name">Seacht na nGaoth</h1>
+    <p class="subtitle" id="card-subname">Seven of Winds · Seven of Swords</p>
+    <div class="toggle" role="group" aria-label="Deck style" style="margin-top:1.5rem;">
+      <button id="style-celtic" aria-pressed="true">Celtic</button>
+      <button id="style-classic" aria-pressed="false">Classic</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container card-detail-container">
+    <picture id="card-art">
+      <source srcset="/assets/img/celtic/seven-of-winds.webp" type="image/webp">
+      <img src="/assets/img/celtic/seven-of-winds.png" alt="Seven of Winds" width="600" height="900" decoding="async">
+    </picture>
+
+    <p class="keywords">transformation · beauty · love · patience in suffering</p>
+
+    <section class="card-meaning">
+      <h2>Upright</h2>
+      <p>The Children of Lir were swans for nine hundred years, and they did not stop singing. Transformation is happening, and it may take longer than you wish. But even in the waiting, there is beauty — in your endurance, in your grace, in the song you sing while the shape of your life changes around you.</p>
+    </section>
+
+    <section class="card-meaning">
+      <h2>Reversed</h2>
+      <p>You have been in this form too long, or you are resisting the transformation that would set you free. The swan is beautiful, but it was not always a swan, and it will not always be one. Let the change come. The enchantment must end for the next life to begin.</p>
+    </section>
+
+    <section class="card-meaning"><h2>Irish lore</h2><p>The Children of Lir were transformed into swans by their jealous stepmother Aoife and spent nine hundred years on the waters of Ireland, singing songs of such beauty that all who heard them wept. Swans in Irish tradition are always more than they seem — often people under enchantment.</p></section>
+
+    <section class="card-cta" style="text-align:center;margin-top:3rem;">
+      <p style="margin-bottom:1rem;">Read this card with Brigid →</p>
+      <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+        <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+    </nav>
+    <p>© 2026 Siobhan McAuley · thebrigidhearth.com</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { getDeckStyle, setDeckStyle } from '/assets/js/site.js';
+  const card = {"slug":"seven-of-winds","classicSlug":"seven-of-swords","nameIrish":"Seacht na nGaoth","nameClassic":"Seven of Swords"};
+
+  function applyStyle(style) {
+    const slug = style === 'celtic' ? card.slug : card.classicSlug;
+    const ext = style === 'celtic' ? 'png' : 'jpg';
+    const pic = document.getElementById('card-art');
+    pic.querySelector('source').srcset = '/assets/img/' + style + '/' + slug + '.webp';
+    pic.querySelector('img').src = '/assets/img/' + style + '/' + slug + '.' + ext;
+    document.getElementById('card-name').textContent = style === 'celtic' ? card.nameIrish : card.nameClassic;
+    document.getElementById('style-celtic').setAttribute('aria-pressed', style === 'celtic');
+    document.getElementById('style-classic').setAttribute('aria-pressed', style === 'classic');
+  }
+
+  applyStyle(getDeckStyle());
+  document.getElementById('style-celtic').addEventListener('click', () => { setDeckStyle('celtic'); applyStyle('celtic'); });
+  document.getElementById('style-classic').addEventListener('click', () => { setDeckStyle('classic'); applyStyle('classic'); });
+</script>
+
+</body>
+</html>

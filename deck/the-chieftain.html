@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An Tiarna · The Chieftain (The Emperor) — Celtic Tarot · The Hearth</title>
+<meta name="description" content="An Tiarna (The Chieftain / The Emperor) — True authority is not taken — it is earned through generosity and fairness. You are being asked to hold steady, to protect what matters, and">
+<link rel="canonical" href="https://thebrigidhearth.com/deck/the-chieftain.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An Tiarna — The Emperor">
+<meta property="og:description" content="True authority is not taken — it is earned through generosity and fairness. You are being asked to hold steady, to protect what matters, and to share your table. Lead with an open hand, not a closed f">
+<meta property="og:url" content="https://thebrigidhearth.com/deck/the-chieftain.html">
+<meta property="og:image" content="https://thebrigidhearth.com/assets/img/celtic/the-chieftain.png">
+<link rel="preload" href="/assets/fonts/cinzel-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Hearth",
+      "item": "https://thebrigidhearth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Celtic Deck",
+      "item": "https://thebrigidhearth.com/deck/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Chieftain",
+      "item": "https://thebrigidhearth.com/deck/the-chieftain.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="container">
+    <a href="/deck/" class="back-home">← The Celtic Deck</a>
+    <p class="label" style="font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:0.18em;font-size:0.85rem;color:var(--gold);margin:1rem 0 0.5rem;">Major Arcana · IV</p>
+    <h1 id="card-name">An Tiarna</h1>
+    <p class="subtitle" id="card-subname">The Chieftain · The Emperor</p>
+    <div class="toggle" role="group" aria-label="Deck style" style="margin-top:1.5rem;">
+      <button id="style-celtic" aria-pressed="true">Celtic</button>
+      <button id="style-classic" aria-pressed="false">Classic</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container card-detail-container">
+    <picture id="card-art">
+      <source srcset="/assets/img/celtic/the-chieftain.webp" type="image/webp">
+      <img src="/assets/img/celtic/the-chieftain.png" alt="The Chieftain" width="600" height="900" decoding="async">
+    </picture>
+
+    <p class="keywords">sovereignty · protection · structure · generosity · the feast</p>
+
+    <section class="card-meaning">
+      <h2>Upright</h2>
+      <p>True authority is not taken — it is earned through generosity and fairness. You are being asked to hold steady, to protect what matters, and to share your table. Lead with an open hand, not a closed fist.</p>
+    </section>
+
+    <section class="card-meaning">
+      <h2>Reversed</h2>
+      <p>Power without generosity is tyranny, and rigidity without warmth is just a stone wall. Ask yourself: are you leading, or simply controlling? The Dagda&#39;s cauldron never emptied because he never hoarded it.</p>
+    </section>
+
+    <section class="card-meaning"><h2>Irish lore</h2><p>The Dagda, &quot;the Good God,&quot; was chief of the Tuatha Dé Danann. He carried an enormous club that could kill with one end and restore life with the other, and his cauldron, the Undry, could feed an army and never run empty. Sovereignty in Ireland was a sacred bond between ruler and land.</p></section>
+
+    <section class="card-cta" style="text-align:center;margin-top:3rem;">
+      <p style="margin-bottom:1rem;">Read this card with Brigid →</p>
+      <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+        <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+    </nav>
+    <p>© 2026 Siobhan McAuley · thebrigidhearth.com</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { getDeckStyle, setDeckStyle } from '/assets/js/site.js';
+  const card = {"slug":"the-chieftain","classicSlug":"the-emperor","nameIrish":"An Tiarna","nameClassic":"The Emperor"};
+
+  function applyStyle(style) {
+    const slug = style === 'celtic' ? card.slug : card.classicSlug;
+    const ext = style === 'celtic' ? 'png' : 'jpg';
+    const pic = document.getElementById('card-art');
+    pic.querySelector('source').srcset = '/assets/img/' + style + '/' + slug + '.webp';
+    pic.querySelector('img').src = '/assets/img/' + style + '/' + slug + '.' + ext;
+    document.getElementById('card-name').textContent = style === 'celtic' ? card.nameIrish : card.nameClassic;
+    document.getElementById('style-celtic').setAttribute('aria-pressed', style === 'celtic');
+    document.getElementById('style-classic').setAttribute('aria-pressed', style === 'classic');
+  }
+
+  applyStyle(getDeckStyle());
+  document.getElementById('style-celtic').addEventListener('click', () => { setDeckStyle('celtic'); applyStyle('celtic'); });
+  document.getElementById('style-classic').addEventListener('click', () => { setDeckStyle('classic'); applyStyle('classic'); });
+</script>
+
+</body>
+</html>

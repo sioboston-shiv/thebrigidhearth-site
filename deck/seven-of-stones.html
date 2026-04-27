@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seacht na gCloch · Seven of Stones (Seven of Pentacles) — Celtic Tarot · The Hearth</title>
+<meta name="description" content="Seacht na gCloch (Seven of Stones / Seven of Pentacles) — Skellig Michael rises from the Atlantic like a prayer made of stone — the furthest point, the last edge, the place where devotion is tested ">
+<link rel="canonical" href="https://thebrigidhearth.com/deck/seven-of-stones.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Seacht na gCloch — Seven of Pentacles">
+<meta property="og:description" content="Skellig Michael rises from the Atlantic like a prayer made of stone — the furthest point, the last edge, the place where devotion is tested by wind and wave. You are being asked how far you are willin">
+<meta property="og:url" content="https://thebrigidhearth.com/deck/seven-of-stones.html">
+<meta property="og:image" content="https://thebrigidhearth.com/assets/img/celtic/seven-of-stones.png">
+<link rel="preload" href="/assets/fonts/cinzel-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Hearth",
+      "item": "https://thebrigidhearth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Celtic Deck",
+      "item": "https://thebrigidhearth.com/deck/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Seven of Stones",
+      "item": "https://thebrigidhearth.com/deck/seven-of-stones.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="container">
+    <a href="/deck/" class="back-home">← The Celtic Deck</a>
+    <p class="label" style="font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:0.18em;font-size:0.85rem;color:var(--gold);margin:1rem 0 0.5rem;">Pentacles</p>
+    <h1 id="card-name">Seacht na gCloch</h1>
+    <p class="subtitle" id="card-subname">Seven of Stones · Seven of Pentacles</p>
+    <div class="toggle" role="group" aria-label="Deck style" style="margin-top:1.5rem;">
+      <button id="style-celtic" aria-pressed="true">Celtic</button>
+      <button id="style-classic" aria-pressed="false">Classic</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container card-detail-container">
+    <picture id="card-art">
+      <source srcset="/assets/img/celtic/seven-of-stones.webp" type="image/webp">
+      <img src="/assets/img/celtic/seven-of-stones.png" alt="Seven of Stones" width="600" height="900" decoding="async">
+    </picture>
+
+    <p class="keywords">devotion · the edge · extremity · testing faith</p>
+
+    <section class="card-meaning">
+      <h2>Upright</h2>
+      <p>Skellig Michael rises from the Atlantic like a prayer made of stone — the furthest point, the last edge, the place where devotion is tested by wind and wave. You are being asked how far you are willing to go for what you believe in. The edge is uncomfortable, but the view is extraordinary.</p>
+    </section>
+
+    <section class="card-meaning">
+      <h2>Reversed</h2>
+      <p>Devotion has become obsession, or you have pushed yourself to an edge that is breaking you. Even the monks came down from the Skellig eventually. There is a difference between dedication and self-destruction. Pull back before you fall.</p>
+    </section>
+
+    <section class="card-meaning"><h2>Irish lore</h2><p>Skellig Michael (Sceilg Mhichíl) is a jagged rock eight miles off the Kerry coast, where monks built beehive huts and lived in extreme devotion from the 6th century. They climbed 600 stone steps above the Atlantic to pray. It is one of the most remote and awe-inspiring monastic sites in the world.</p></section>
+
+    <section class="card-cta" style="text-align:center;margin-top:3rem;">
+      <p style="margin-bottom:1rem;">Read this card with Brigid →</p>
+      <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+        <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+    </nav>
+    <p>© 2026 Siobhan McAuley · thebrigidhearth.com</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { getDeckStyle, setDeckStyle } from '/assets/js/site.js';
+  const card = {"slug":"seven-of-stones","classicSlug":"seven-of-pentacles","nameIrish":"Seacht na gCloch","nameClassic":"Seven of Pentacles"};
+
+  function applyStyle(style) {
+    const slug = style === 'celtic' ? card.slug : card.classicSlug;
+    const ext = style === 'celtic' ? 'png' : 'jpg';
+    const pic = document.getElementById('card-art');
+    pic.querySelector('source').srcset = '/assets/img/' + style + '/' + slug + '.webp';
+    pic.querySelector('img').src = '/assets/img/' + style + '/' + slug + '.' + ext;
+    document.getElementById('card-name').textContent = style === 'celtic' ? card.nameIrish : card.nameClassic;
+    document.getElementById('style-celtic').setAttribute('aria-pressed', style === 'celtic');
+    document.getElementById('style-classic').setAttribute('aria-pressed', style === 'classic');
+  }
+
+  applyStyle(getDeckStyle());
+  document.getElementById('style-celtic').addEventListener('click', () => { setDeckStyle('celtic'); applyStyle('celtic'); });
+  document.getElementById('style-classic').addEventListener('click', () => { setDeckStyle('classic'); applyStyle('classic'); });
+</script>
+
+</body>
+</html>

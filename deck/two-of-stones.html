@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dó na gCloch · Two of Stones (Two of Pentacles) — Celtic Tarot · The Hearth</title>
+<meta name="description" content="Dó na gCloch (Two of Stones / Two of Pentacles) — The fairy fort looks like an ordinary mound, but beneath it lies another world entirely. Be aware of the boundaries you are walking near — s">
+<link rel="canonical" href="https://thebrigidhearth.com/deck/two-of-stones.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dó na gCloch — Two of Pentacles">
+<meta property="og:description" content="The fairy fort looks like an ordinary mound, but beneath it lies another world entirely. Be aware of the boundaries you are walking near — some are more significant than they appear. Respect what lies">
+<meta property="og:url" content="https://thebrigidhearth.com/deck/two-of-stones.html">
+<meta property="og:image" content="https://thebrigidhearth.com/assets/img/celtic/two-of-stones.png">
+<link rel="preload" href="/assets/fonts/cinzel-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Hearth",
+      "item": "https://thebrigidhearth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Celtic Deck",
+      "item": "https://thebrigidhearth.com/deck/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Two of Stones",
+      "item": "https://thebrigidhearth.com/deck/two-of-stones.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="container">
+    <a href="/deck/" class="back-home">← The Celtic Deck</a>
+    <p class="label" style="font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:0.18em;font-size:0.85rem;color:var(--gold);margin:1rem 0 0.5rem;">Pentacles</p>
+    <h1 id="card-name">Dó na gCloch</h1>
+    <p class="subtitle" id="card-subname">Two of Stones · Two of Pentacles</p>
+    <div class="toggle" role="group" aria-label="Deck style" style="margin-top:1.5rem;">
+      <button id="style-celtic" aria-pressed="true">Celtic</button>
+      <button id="style-classic" aria-pressed="false">Classic</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container card-detail-container">
+    <picture id="card-art">
+      <source srcset="/assets/img/celtic/two-of-stones.webp" type="image/webp">
+      <img src="/assets/img/celtic/two-of-stones.png" alt="Two of Stones" width="600" height="900" decoding="async">
+    </picture>
+
+    <p class="keywords">the boundary · what lies beneath · hidden realms · caution</p>
+
+    <section class="card-meaning">
+      <h2>Upright</h2>
+      <p>The fairy fort looks like an ordinary mound, but beneath it lies another world entirely. Be aware of the boundaries you are walking near — some are more significant than they appear. Respect what lies beneath the surface, even if you cannot see it.</p>
+    </section>
+
+    <section class="card-meaning">
+      <h2>Reversed</h2>
+      <p>You may be ignoring a boundary that exists for good reason, or you are so afraid of what lies beneath that you will not go near the mound at all. The fairy fort is not a trap; it is a threshold. Approach with respect, not fear.</p>
+    </section>
+
+    <section class="card-meaning"><h2>Irish lore</h2><p>Fairy forts (ráths) are the circular earthworks that dot the Irish countryside — over 60,000 of them. In tradition, they are entrances to the Otherworld, homes of the sídhe. Disturbing a fairy fort brought terrible luck. Farmers ploughed around them for centuries, and many still do.</p></section>
+
+    <section class="card-cta" style="text-align:center;margin-top:3rem;">
+      <p style="margin-bottom:1rem;">Read this card with Brigid →</p>
+      <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+        <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+    </nav>
+    <p>© 2026 Siobhan McAuley · thebrigidhearth.com</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { getDeckStyle, setDeckStyle } from '/assets/js/site.js';
+  const card = {"slug":"two-of-stones","classicSlug":"two-of-pentacles","nameIrish":"Dó na gCloch","nameClassic":"Two of Pentacles"};
+
+  function applyStyle(style) {
+    const slug = style === 'celtic' ? card.slug : card.classicSlug;
+    const ext = style === 'celtic' ? 'png' : 'jpg';
+    const pic = document.getElementById('card-art');
+    pic.querySelector('source').srcset = '/assets/img/' + style + '/' + slug + '.webp';
+    pic.querySelector('img').src = '/assets/img/' + style + '/' + slug + '.' + ext;
+    document.getElementById('card-name').textContent = style === 'celtic' ? card.nameIrish : card.nameClassic;
+    document.getElementById('style-celtic').setAttribute('aria-pressed', style === 'celtic');
+    document.getElementById('style-classic').setAttribute('aria-pressed', style === 'classic');
+  }
+
+  applyStyle(getDeckStyle());
+  document.getElementById('style-celtic').addEventListener('click', () => { setDeckStyle('celtic'); applyStyle('celtic'); });
+  document.getElementById('style-classic').addEventListener('click', () => { setDeckStyle('classic'); applyStyle('classic'); });
+</script>
+
+</body>
+</html>

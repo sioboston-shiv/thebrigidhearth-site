@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dó na nGaoth · Two of Winds (Two of Swords) — Celtic Tarot · The Hearth</title>
+<meta name="description" content="Dó na nGaoth (Two of Winds / Two of Swords) — The hare sits between worlds — wild and watchful, neither fully of this world nor the other. You are being called to shapeshift, to adapt, t">
+<link rel="canonical" href="https://thebrigidhearth.com/deck/two-of-winds.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dó na nGaoth — Two of Swords">
+<meta property="og:description" content="The hare sits between worlds — wild and watchful, neither fully of this world nor the other. You are being called to shapeshift, to adapt, to see things from a different angle. What looks like one thi">
+<meta property="og:url" content="https://thebrigidhearth.com/deck/two-of-winds.html">
+<meta property="og:image" content="https://thebrigidhearth.com/assets/img/celtic/two-of-winds.png">
+<link rel="preload" href="/assets/fonts/cinzel-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Hearth",
+      "item": "https://thebrigidhearth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Celtic Deck",
+      "item": "https://thebrigidhearth.com/deck/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Two of Winds",
+      "item": "https://thebrigidhearth.com/deck/two-of-winds.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="container">
+    <a href="/deck/" class="back-home">← The Celtic Deck</a>
+    <p class="label" style="font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:0.18em;font-size:0.85rem;color:var(--gold);margin:1rem 0 0.5rem;">Swords</p>
+    <h1 id="card-name">Dó na nGaoth</h1>
+    <p class="subtitle" id="card-subname">Two of Winds · Two of Swords</p>
+    <div class="toggle" role="group" aria-label="Deck style" style="margin-top:1.5rem;">
+      <button id="style-celtic" aria-pressed="true">Celtic</button>
+      <button id="style-classic" aria-pressed="false">Classic</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container card-detail-container">
+    <picture id="card-art">
+      <source srcset="/assets/img/celtic/two-of-winds.webp" type="image/webp">
+      <img src="/assets/img/celtic/two-of-winds.png" alt="Two of Winds" width="600" height="900" decoding="async">
+    </picture>
+
+    <p class="keywords">magic · shapeshifting · duality · liminal encounters</p>
+
+    <section class="card-meaning">
+      <h2>Upright</h2>
+      <p>The hare sits between worlds — wild and watchful, neither fully of this world nor the other. You are being called to shapeshift, to adapt, to see things from a different angle. What looks like one thing may be another entirely. Trust your instincts; they are wilder and wiser than your logic.</p>
+    </section>
+
+    <section class="card-meaning">
+      <h2>Reversed</h2>
+      <p>You may be changing shape so often that you have lost your own. Or you are refusing to adapt when the situation demands it. The hare is magic, but it is also a hare — it knows what it is even when it wears another form.</p>
+    </section>
+
+    <section class="card-meaning"><h2>Irish lore</h2><p>The hare (Giorria) was sacred in Irish tradition and associated with shapeshifting and the Otherworld. It was taboo to hunt hares in some regions, for they might be women in animal form. The March hare&#39;s madness was considered a kind of magical ecstasy.</p></section>
+
+    <section class="card-cta" style="text-align:center;margin-top:3rem;">
+      <p style="margin-bottom:1rem;">Read this card with Brigid →</p>
+      <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+        <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+    </nav>
+    <p>© 2026 Siobhan McAuley · thebrigidhearth.com</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { getDeckStyle, setDeckStyle } from '/assets/js/site.js';
+  const card = {"slug":"two-of-winds","classicSlug":"two-of-swords","nameIrish":"Dó na nGaoth","nameClassic":"Two of Swords"};
+
+  function applyStyle(style) {
+    const slug = style === 'celtic' ? card.slug : card.classicSlug;
+    const ext = style === 'celtic' ? 'png' : 'jpg';
+    const pic = document.getElementById('card-art');
+    pic.querySelector('source').srcset = '/assets/img/' + style + '/' + slug + '.webp';
+    pic.querySelector('img').src = '/assets/img/' + style + '/' + slug + '.' + ext;
+    document.getElementById('card-name').textContent = style === 'celtic' ? card.nameIrish : card.nameClassic;
+    document.getElementById('style-celtic').setAttribute('aria-pressed', style === 'celtic');
+    document.getElementById('style-classic').setAttribute('aria-pressed', style === 'classic');
+  }
+
+  applyStyle(getDeckStyle());
+  document.getElementById('style-celtic').addEventListener('click', () => { setDeckStyle('celtic'); applyStyle('celtic'); });
+  document.getElementById('style-classic').addEventListener('click', () => { setDeckStyle('classic'); applyStyle('classic'); });
+</script>
+
+</body>
+</html>
