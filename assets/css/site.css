@@ -152,13 +152,21 @@ section { padding: clamp(48px, 8vw, 96px) 0; }
 }
 .btn-primary:hover { background: var(--gold-soft); color: var(--green); }
 
-/* Pillars */
-.pillar { display: grid; gap: 2rem; align-items: center; }
-@media (min-width: 768px) {
-  .pillar { grid-template-columns: 1fr 1fr; gap: 4rem; }
-  .pillar.reverse > :first-child { order: 2; }
+/* Pillars — compact text-led layout with theme icon */
+.pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 720px;
+  margin: 0 auto;
 }
-.pillar img { width: 100%; height: auto; border-radius: 8px; }
+.pillar-icon {
+  width: 36px;
+  height: 36px;
+  fill: var(--gold);
+  opacity: 0.9;
+}
 
 /* FAQ */
 details {
