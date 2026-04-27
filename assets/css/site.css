@@ -276,6 +276,86 @@ footer .links { display: flex; gap: 32px; justify-content: center; margin-bottom
   .founder-row { grid-template-columns: 240px 1fr; gap: 3rem; }
 }
 
+/* Deck index + card detail page header */
+.page-header { padding: 64px 0 32px; text-align: center; }
+.back-home { font-size: 0.9rem; color: var(--faint); border: none; }
+.subtitle { color: var(--faint); margin: 0.5rem 0 2rem; }
+
+.deck-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.toggle, .filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.toggle button, .filters button {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+}
+.toggle button[aria-pressed="true"], .filters button[aria-pressed="true"] {
+  background: var(--gold);
+  color: var(--green);
+}
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 32px 0 96px;
+}
+@media (min-width: 768px) {
+  .deck-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .deck-grid { grid-template-columns: repeat(6, 1fr); }
+}
+.deck-grid a {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+}
+.deck-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+.deck-grid a:hover img { transform: translateY(-4px); }
+.deck-grid .name {
+  font-family: 'Cinzel', Georgia, serif;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+/* Card detail layout */
+.card-detail-container { max-width: 720px; }
+.card-detail-container picture img {
+  width: 100%;
+  max-width: 480px;
+  display: block;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+  box-shadow: 0 16px 60px rgba(0,0,0,0.5);
+}
+.card-detail-container .keywords {
+  text-align: center;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+}
+.card-meaning { margin-bottom: 2rem; }
+.card-meaning h2 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
 /* Final CTA strip */
 #final-cta {
   background: var(--green-deep);
