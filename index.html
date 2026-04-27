@@ -34,15 +34,124 @@
   </div>
 </section>
 
-<!-- DAILY CARD section — populated in Task 9 -->
+<!-- DAILY CARD -->
+<section class="daily-card-section" id="daily">
+  <div class="container">
+    <p class="label">Today's card</p>
+    <h2 id="daily-card-date"></h2>
+    <div id="daily-card" class="card-display" aria-live="polite"></div>
+    <button id="pull-button" class="pull-button" aria-controls="pull-result">Pull a different card</button>
+    <div id="pull-result" class="card-display" hidden></div>
+  </div>
+</section>
 
-<!-- PILLARS — populated in Task 10 -->
+<!-- PILLARS -->
+<section id="pillars">
+  <div class="container">
+    <article class="pillar">
+      <img src="/assets/img/pillars/brigid.svg" alt="Brigid by the hearth, illustration" loading="lazy">
+      <div>
+        <h2>Brigid at the Hearth</h2>
+        <p>Sit by the fire with Brigid — an AI companion grounded in Irish folk tradition. She knows your readings, the season you're in, and the rituals you've kept. Bring her your questions; she answers as a goddess does — slant.</p>
+      </div>
+    </article>
 
-<!-- FOUNDER — populated in Task 11 -->
+    <article class="pillar reverse">
+      <img src="/assets/img/pillars/cards.svg" alt="Celtic deck, fan of cards" loading="lazy">
+      <div>
+        <h2>The Celtic Deck</h2>
+        <p>Seventy-eight cards in Irish and English — Branches, Wells, Winds, Stones — drawn from native lore and mythology. Choose Celtic naming or traditional Smith-Waite. <a href="/deck/">Browse the deck →</a></p>
+      </div>
+    </article>
 
-<!-- FAQ — populated in Task 12 -->
+    <article class="pillar">
+      <img src="/assets/img/pillars/plants.svg" alt="Native Irish plants illustration" loading="lazy">
+      <div>
+        <h2>The Green Path</h2>
+        <p>Sixty-three native plants and the conditions our ancestors used them for. Traditional preparations, folk uses, and the ailments they were trusted with — together in a herbal you can carry. (Not medical advice.)</p>
+      </div>
+    </article>
 
-<!-- FINAL CTA — populated in Task 13 -->
+    <article class="pillar reverse">
+      <img src="/assets/img/pillars/wheel.svg" alt="Wheel of the Year illustration" loading="lazy">
+      <div>
+        <h2>The Wheel of the Year</h2>
+        <p>The eight fire festivals of the Celtic year — Imbolc, Bealtaine, Lughnasadh, Samhain, and the four solar holidays between. Lunar phases, seasonal threshold rituals, and what to do when.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="container">
+    <div class="founder-row">
+      <img src="/assets/img/founder.svg" alt="Siobhan McAuley" class="founder-photo" width="240" height="240" loading="lazy">
+      <div>
+        <h2>Why I built this</h2>
+        <p>I grew up between two worlds — Boston and the west of Ireland. The old ways were never far: my grandmother's prayers, the bonfires at Bealtaine, the herbs my aunt grew along the wall. I built The Hearth because I wanted a place to keep them — not as nostalgia, but as a daily practice. Brigid keeps the fire here. You're welcome to it.</p>
+        <p style="color: var(--faint); font-size: 0.9rem;">— Siobhan McAuley, builder of The Hearth</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container" style="max-width: 760px;">
+    <h2 style="text-align: center; margin-bottom: 2.5rem;">Questions</h2>
+
+    <details>
+      <summary>Is this religious?</summary>
+      <p>No. The Hearth draws on Irish folk tradition — practice it as cultural heritage, as faith, or simply out of curiosity. The app makes no demand of belief.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to be Irish?</summary>
+      <p>No. You'll learn the names and the seasons as you go. Brigid speaks plainly.</p>
+    </details>
+
+    <details>
+      <summary>I'm new to tarot — will I get it?</summary>
+      <p>Yes. The Hearth teaches as you read. Start with a single card; Brigid will walk you through it.</p>
+    </details>
+
+    <details>
+      <summary>Is the plant medicine medical advice?</summary>
+      <p>No. The Green Path is a record of traditional folk uses and is intended as cultural and educational material only. Always consult a doctor for medical issues.</p>
+    </details>
+
+    <details>
+      <summary>What's the difference between free and Practitioner?</summary>
+      <p>The free tier gives you the full deck, daily card, plant browser, and limited conversations with Brigid. Practitioner ($69.99/year, 7-day free trial) unlocks unlimited Brigid, the Celtic Cross spread, the full Grimoire, and the ritual log. Cancel anytime.</p>
+    </details>
+
+    <details>
+      <summary>Can I cancel?</summary>
+      <p>Yes — anytime in your iPhone Settings → Subscriptions. Practitioner access remains until the end of the current period.</p>
+    </details>
+
+    <details>
+      <summary>Is there an Android version?</summary>
+      <p>Not yet. iOS first; Android is on the roadmap.</p>
+    </details>
+
+    <details>
+      <summary>Where is my data stored?</summary>
+      <p>Encrypted on Supabase (EU region). We do not sell your data, run ads, or share with third parties beyond what's needed to provide Brigid's responses (Anthropic, who do not train on user data). See <a href="/privacy.html">our privacy policy</a>.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="container">
+    <h2>Tend the fire.</h2>
+    <a href="https://apps.apple.com/app/id6761735989" aria-label="Download on the App Store">
+      <img class="app-store-badge" src="/assets/img/hero/app-store-badge.svg" alt="Download on the App Store" width="168" height="56">
+    </a>
+  </div>
+</section>
 
 <footer>
   <div class="container">

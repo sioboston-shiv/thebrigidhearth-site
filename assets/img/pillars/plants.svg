@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="g-plants" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1C3A2A"/>
+      <stop offset="100%" stop-color="#0d1c14"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g-plants)"/>
+  <text x="50%" y="52%" font-family="Cinzel,Georgia,serif" font-size="220" fill="#D4B86A" text-anchor="middle" dominant-baseline="middle" opacity="0.55">✦</text>
+</svg>
