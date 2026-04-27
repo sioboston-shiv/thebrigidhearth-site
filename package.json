@@ -1,0 +1,11 @@
+{
+  "name": "thebrigidhearth-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/",
+    "build:deck": "node scripts/generate-deck-pages.mjs",
+    "build:sitemap": "node scripts/generate-sitemap.mjs",
+    "build:images": "./scripts/convert-images.sh"
+  }
+}
